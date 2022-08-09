@@ -2,8 +2,9 @@ import sys
 input = sys.stdin.readline
 
 n = int(input())
-words = [input().rstrip() for _ in range(n)]
-words = list(set(words))
+word = [input().rstrip() for _ in range(n)]
 
-words.sort(key=lambda x: (len(x), x))
+word = list(set(word))
+word.sort(key=lambda x: (len(x), x))
+
 print('\n'.join(word))
