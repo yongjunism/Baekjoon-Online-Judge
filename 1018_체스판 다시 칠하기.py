@@ -18,5 +18,4 @@ for x in range(n-7):
                     if board[i][j] != 'B': w_cnt += 1
                     if board[i][j] != 'W': b_cnt += 1
         res = min(res, w_cnt, b_cnt)
-
 print(res)
