@@ -29,7 +29,7 @@ for dir in action:
     if 0 <= nx < n and 0 <= ny < m:
         x, y = nx, ny
     else:
-        # nx -= dx
+        # nx -= dx      # x,y는 그대로이므로 어차피 다음 dir에서 nx,ny가 새로 갱신됨
         # ny -= dy
         continue
     move(dir)
