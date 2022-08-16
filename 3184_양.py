@@ -1,5 +1,5 @@
-from collections import deque
 import sys
+sys.setrecursionlimit(10**6)
 input = sys.stdin.readline
 
 def dfs(x, y):
@@ -23,11 +23,12 @@ row, col = map(int, input().split())
 yard = [list(input().rstrip()) for _ in range(row)]
 dir = [(0, -1), (0, 1), (-1, 0), (1, 0)]
 visited = [[0] * col for _ in range(row)]
-sheep, wolf, o, v = 0, 0, 0, 0
+sheep, wolf = 0, 0
 
 for i in range(row):
     for j in range(col):
         if yard[i][j] != '#' and visited[i][j] == 0:
+            o, v = 0, 0
             if yard[i][j]=='o':
                 o += 1
             if yard[i][j]=='v':
@@ -37,6 +38,4 @@ for i in range(row):
                 sheep += o
             else:
                 wolf += v
-            o, v = 0, 0
-
 print(sheep, wolf)
