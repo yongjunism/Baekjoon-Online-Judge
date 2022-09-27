@@ -1,5 +1,4 @@
 room_num = list(map(int, input()))
-print(room_num)
 freq = [0] * 9
 
 for num in room_num:
